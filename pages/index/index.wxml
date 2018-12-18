@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="container">
+<view class='carsouel'>
+  <!-- <button id='leftBtn' plain='true' class='carsouel-btn' style='float:left'></button>
+  <button id='leftBtn' plain='true' class='carsouel-btn' style='float:right'></button>
+  <image class='carsouel' style='float:left; margin: -40% 0%' src="../../resources/index/1.png"></image> -->
+  <swiper indicator-dots='true' circular='true'>
+    <swiper-item wx:for="{{swiperPictures}}">
+      <image src="{{item}}" class='carsouel' mode='scaleToFill'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view style='width: 100%'>
+  <view id='1' class='module-background' bindtap='changeSwiperPicture'>
+    <view class='module'>
+      <image class='module-image' mode='aspectFit' src='../../resources/home_icon_live.png'></image>
+      <view class='module-text'>组织生活</view>
+    </view>
+  </view>
+  <view id='2' class='module-background' bindtap='changeSwiperPicture'>
+    <view class='module'>
+      <image class='module-image' mode='aspectFit' src='../../resources/home_icon_activity.png'></image>
+      <view class='module-text'>党建活动</view>
+    </view>
+  </view>
+  <view id='3' class='module-background' bindtap='changeSwiperPicture'>
+    <view class='module'>
+      <image class='module-image' mode='aspectFit' src='../../resources/home_icon_news.png'></image>
+      <view class='module-text'>时政要闻</view>
+    </view>
+  </view>
+  <view id='4' class='module-background' bindtap='changeSwiperPicture'>
+    <view class='module'>
+      <image class='module-image' mode='aspectFit' src='../../resources/home_icon_houseparty.png'></image>
+      <view class='module-text'>党员之家</view>
+    </view>
+  </view>
+  <view id='5' class='module-background' bindtap='changeSwiperPicture'>
+    <view class='module'>
+      <image class='module-image' mode='aspectFit' src='../../resources/home_icon_map.png'></image>
+      <view class='module-text'>党建地图</view>
+    </view>
+  </view>
+  <view id='6' class='module-background' bindtap='changeSwiperPicture'>
+    <view class='module'>
+      <image class='module-image' mode='aspectFit' src='../../resources/home_icon_calendar.png'></image>
+      <view class='module-text'>党务日历</view>
+    </view>
+  </view>
+  <!-- <view id='2' class='module-background' bindtap='changeSwiperPicture'></view>
+  <view id='3' class='module-background' bindtap='changeSwiperPicture'></view>
+  <view id='4' class='module-background' bindtap='changeSwiperPicture'></view>
+  <view id='5' class='module-background' bindtap='changeSwiperPicture'></view> -->
+</view>
+  <!-- <view class="carsouel">
+    
+  </view> -->
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>

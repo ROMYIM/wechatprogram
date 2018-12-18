@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/notice/notice"
+  ],
+  "window": {
+    "navigationBarTitleText": "酒店管理系统",
+    "navigationBarBackgroundColor": "#305a61",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "公告"
+      }
+    ],
+    "color": "#ffffff",
+    "backgroundColor": "#305a61",
+    "position": "bottom"
+  }
+}
