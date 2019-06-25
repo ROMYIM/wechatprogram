@@ -1,0 +1,4 @@
+<!--components/page/page.wxml-->
+<view hidden="{{hidden}}">
+  <pageName id="control"></pageName>
+</view>

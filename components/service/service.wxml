@@ -1,0 +1,33 @@
+<!--components/service/service.wxml-->
+<view class='container' hidden="{{hidden}}" style='background-color: #f5f5f5'>
+  <!-- <view class='room-id'>{{roomID}}</view> -->
+  <view class='services-background'>
+    <view class='service-panel' data-id='0'  bindtap='serviceButtonClick'>
+      <image class='service-icon' data-id='0' animation="{{iconAnimationData[0]}}" src='/resources/service/service_icon_washclothes.png'></image>
+      <view class='service-text' data-id='0' animation="{{textAnimationData[0]}}">洗衣服务</view>
+    </view>
+    <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange='setClock'>
+      <view class='service-panel' bindtap='serviceButtonClick'>
+        <image class='service-icon' src='/resources/service/service_icon_wakeup.png'></image>
+        <view class='service-text'>叫醒服务</view>
+      </view>
+    </picker>
+    
+    <view class='service-panel' data-id='1' bindtap='serviceAnimation' bindtap='serviceButtonClick'>
+      <image class='service-icon' data-id='1' animation="{{iconAnimationData[1]}}" src='/resources/service/service_icon_car.png'></image>
+      <view class='service-text' data-id='1' animation="{{textAnimationData[1]}}">叫车服务</view>
+    </view>
+    <view class='service-panel' bindtap='serviceButtonClick'>
+      <image class='service-icon' src='/resources/service/service_icon_sweep.png'></image>
+      <view class='service-text'>打扫服务</view>
+    </view>
+    <view class='service-panel' bindtap='serviceButtonClick'>
+      <image class='service-icon' src='/resources/service/service_icon_invoice.png'></image>
+      <view class='service-text'>预约发票</view>
+    </view>
+    <view class='service-panel' bindtap='serviceButtonClick'>
+      <image class='service-icon' src='/resources/service/service_icon_checkout.png'></image>
+      <view class='service-text'>预约退房</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class='tabbar-container' style='height:{{height}}; width:{{width}};'>
+  <view class='tabbar-panel'>
+    <block wx:for="{{list}}" wx:for-item="item" wx:key="id">
+      <view wx:if="{{item.id != 2}}" id="{{item.id}}" class='tabbar-item' catchtap='_clickEvent'>
+        <image class='{{item.iconCss}}' src="{{item.iconPath}}"></image>
+        <view class='item-text' style="color: {{item.textColor}}">{{item.text}}</view>
+      </view>
+      <view wx:else id="{{item.id}}" class='tabbar-item' catch:tap="_openEvent">
+        <image class='{{item.iconCss}}' style='width:15vw; height:15vw' src="{{item.iconPath}}"></image>
+      </view>
+    </block>
+    
+  </view>
+</view>

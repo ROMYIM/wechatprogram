@@ -1,0 +1,42 @@
+/* pages/result/result.wxss */
+.container {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 7vh;
+  padding-bottom: 4vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 14vw;
+  height: 14vw;
+  border-radius: 50%;
+}
+
+.message {
+  font-family: MicrosoftYaHei;
+	font-size: 3vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+	color: #737373;
+}
+
+button {
+  position: fixed;
+  left: 5vw;
+  bottom: 10vh;
+  padding: 0;
+  margin-top: 7vh;
+  width: 90vw;
+  height: 8vh;
+  background-color: #3c73f8;
+  color: white;
+  font-size: 4vw;
+  font-family: 'Consolas';
+  border-radius: 4vh;
+  line-height: 8vh;
+}

@@ -1,0 +1,272 @@
+/* pages/order/orderList.wxss */
+.background {
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+/* .order-info {
+  width: 100%;
+  height: auto;
+}
+
+.order-item {
+  width: 94vw;
+  height: 8vh;
+  border-bottom: 1px solid #f8f8f8;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  font-family: 'Consolas';
+	font-size: 2.5vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+}
+
+.item.name, .item.consume {
+	color: #737373;
+}
+
+.item.value {
+  color: black;
+}
+
+.item.money {
+  color: #f2373e
+}
+
+.item-container {
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1rpx solid #cccccc;
+	padding-top: 1vh;
+}
+
+.check-in-item {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 1vh;
+}
+
+.date-item {
+	display: flex;
+	align-items: flex-end;
+}
+
+.date-item-label {
+	font-size:1.5vh;
+	height:2vh;
+	line-height:2vh;
+	color:#737373;
+	text-align:center;
+}
+
+.date-item-value {
+	font-size: 2vh;
+	height: 2.5vh;
+	line-height: 2.5vh;
+	color: #737373;
+}
+
+.consume-item {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+}
+
+.consume-item .consume {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+} */
+
+.tabbar {
+	height: 7vh;
+}
+
+.tabbar.container {
+	/* width: 90vw; */
+	padding-left: 5vw;
+	padding-right: 5vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tabbar.item {
+	font-family: '黑体';
+	font-size: 5vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+	line-height: 7vh;
+}
+
+.tabbar.item.normal {
+	color: #737373;
+}
+
+.tabbar.item.selected {
+	color: #3370f7;
+	border-bottom: 2rpx solid #3370f7;
+}
+
+.order-item-container {
+	width: 92vw;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	background: white;
+	margin-top: 2vh;
+}
+
+.item-title {
+	height: 6vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-family: 黑体;
+	font-size: 2.5vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+	line-height: 6vh;
+}
+
+.item-title .no {
+	color: #8d8d8d;
+}
+
+.item-title .order-type {
+	color: #f2373e;
+}
+
+.item-detail-container {
+	height: 10vh;
+	background-color: #f5f5f5;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	padding-left: 2vw;
+	padding-right: 3vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.item-detail-picture {
+	width: 17vw;
+	height: 100%;
+}
+
+.family-type-detail {
+	width: 55vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item-title.family-type {
+	height: auto;
+	line-height: 3vh;
+	color: black;
+}
+
+.item-title.family-type.name {
+	font-family:  MicrosoftYaHei-Bold;
+}
+
+.item-title.family-type.duration {
+	color: #887788;
+	font-size: 4vw;
+}
+
+.item-contorl {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	height: 7vh;
+}
+
+.control-button {
+	width: 21vw;
+	height: 4vh;
+	font-family: MicrosoftYaHei;
+	font-size: 2vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+	color: #3770f7;
+	margin-right: 3vw;
+	border-radius: 1vw;
+	border: solid 1rpx #3770f7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.item-price {
+	width: 10vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.item-price .item-title.family-type.price {
+	font-family: 'Consolas';
+	color: black;
+	height: 3vh;
+	line-height: 3vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.no-item-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 15vh;
+	padding-bottom: 45vh;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.no-item-picture {
+	width: 40vw;
+	height: 40vw;
+}
+
+.no-itme-text {
+	font-family: MicrosoftYaHei;
+	font-size: 2.5vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+	line-height: 4vh;
+	text-align: center;
+	color: #6f6f6f
+}

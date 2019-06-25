@@ -1,0 +1,76 @@
+/* pages/order/create.wxss */
+.background {
+	color: #f5f5f5;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.order-info {
+    width: 100%;
+    height: auto;
+    }
+
+.order-item {
+    width: 94vw;
+    height: 8vh;
+    border-bottom: 1px solid #f8f8f8;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    font-family: 'Consolas';
+    font-size: 2.5vh;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0vh;
+}
+
+.item.name {
+	color: #737373;
+}
+
+.item.value {
+    color: black;
+}
+
+.consume-item {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.consume-item .consume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item.consume {
+    color: #4077f7
+}
+
+.item.money {
+    color: #f2373e
+}
+
+button {
+    padding: 0;
+    margin-top: 7vh;
+    width: 90vw;
+    height: 8vh;
+    background-color: #3c73f8;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Consolas';
+    border-radius: 4vh;
+    line-height: 8vh;
+}

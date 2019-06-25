@@ -1,0 +1,18 @@
+<!--pages/personal_info/personal_info.wxml-->
+<view class="background">
+    <form class="user-info-panel">
+        <view class="user-info-item">
+            <view class="item-text">姓名</view>
+            <input class="item-input" name="name" type="text" placeholder="请输入真实姓名" value="{{name ? name : ''}}"></input>
+        </view>
+        <view class="user-info-item">
+            <view class="item-text">手机</view>
+            <input class="item-input" name="phone" type="number" placeholder="请输入手机号码" value="{{phone ? phone : ''}}"></input>
+        </view>
+        <view class="user-info-item" style="border-bottom: none">
+            <view class="item-text">性别</view>
+            <picker class="item-input" bindchange="selectGender" range="{{genderList}}" range-key="name">{{gender ? gender.name : '点击选择性别'}}  > </picker>
+        </view>
+    </form>
+    
+</view>

@@ -1,0 +1,151 @@
+/* components/record/record.wxss */
+.dialog-background {
+    /* position: fixed;
+    top: 10vh; */
+    width: 100%;
+    height: 100%;
+    
+    z-index: 8009;
+}
+
+.dialog-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.8;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+}
+
+.dialog-container {
+    position: fixed;
+    top: 5%;
+    width: 100%;
+    height: 83vh;
+    z-index: 9001;
+    overflow: scroll;
+}
+
+.dialog-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: fixed;
+    top: 20vh;
+    z-index: 9001; */
+    width: 90%;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: scroll;
+}
+
+.dialog-close-btn {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    color: white;
+    border: 1rpx solid white;
+    /* position: fixed;
+    right: 5%;
+    top: 5%;
+    z-index: 9001; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 90vw;
+}
+
+.dialog-title {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 3vh;
+    border-bottom: .2rpx solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    /* position: fixed;
+    top: 10vh;
+    z-index: 9001; */
+    height: 10vh;
+    line-height: 10vh;
+    width: 100%;
+}
+
+.dialog-item {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    height: 10vh;
+    align-items: flex-start;
+    color: rgba(255, 255, 255, 0.6);
+    z-index: 9001;
+    border-bottom: .2rpx solid rgba(255, 255, 255, 0.7);
+}
+
+.item-icon {
+    padding-left: 5vw;
+    padding-right: 3vw;
+    width: 15vw;
+    height: 15vw;
+    z-index: 9001;
+    opacity: 0.6;
+}
+
+.item-text-container {
+    width: 70vw;
+    height: auto;
+}
+
+.item-text {
+    height: 5vh;
+    line-height: 5vh;
+    z-index: 9001;
+    font-size: 2.5vh;
+}
+
+.item-arrow {
+    width: 5vw;
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+}
+
+.record-icon {
+    border-radius: 50%;
+    border: 1rpx solid #f5f0f0;
+    width: 15vw;
+    height: 15vw;
+    margin-top:1vh;
+    margin-bottom:1vh;
+    z-index: 9004;
+}
+
+.record-tabbar {
+    z-index: 9003;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0%;
+    /* height: 10vh; */
+}
+
+.circle-style {
+    position: fixed;
+    border-radius: 50%;
+    border: 2rpx solid #f5f0f0;
+    width: 15vw;
+    height: 15vw;
+    z-index: 9001;
+    bottom: 1vh;
+    left: 42.3vw;
+    z-index: 9002;
+}
+

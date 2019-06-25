@@ -1,0 +1,136 @@
+/* pages/recede/recede.wxss */
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.book-container {
+  background-color: white;
+  margin-bottom: 2vh;
+}
+
+.check-in-item {
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.check-in-item.last {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.date-text {
+  font-size: 4vh;
+  font-family: '黑体';
+  color: #4077f7
+}
+
+.date-label {
+  font-size: 1.5vh;
+  height: 2vh;
+  line-height: 2vh;
+  color: #737373;
+  text-align: center;
+}
+
+.date-item {
+  direction: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.duration-text {
+  border: 1rpx solid #cccccc;
+  border-radius: 2vh;
+  font-size: 2.5vh;
+  width: 32vw;
+  height: 4vh;
+  line-height: 4vh; 
+  text-align: center;
+  color: #4077f7;
+}
+
+.item {
+  font-family: 'Consolas';
+	font-size: 2.5vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+}
+
+.item.name {
+	color: #737373;
+}
+
+.item.value {
+  color: black;
+}
+
+.consume-item {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.consume-item .consume {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item.consume {
+  color: #4077f7
+}
+
+.item.money {
+  color: #f2373e
+}
+
+.people-button {
+  border: 1rpx solid #e0e0e0;
+  width: 11vw;
+  height: 6vh;
+  line-height: 6vh;
+  text-align: center;
+  color: black;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.people-button::after {
+  border: none;
+}
+
+.people-button.left {
+  border-bottom-left-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+}
+
+.people-button.right {
+  border-bottom-right-radius: 10rox;
+  border-top-right-radius: 10rox;
+}
+
+button {
+  padding: 0;
+  width: 90vw;
+  height: 8vh;
+  background-color: #3c73f8;
+  color: white;
+  font-size: 4vw;
+  font-family: 'Consolas';
+  line-height: 8vh;
+  border-radius: 4vh;
+}

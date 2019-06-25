@@ -1,0 +1,131 @@
+<!--pages/order/order.wxml-->
+<view class='container' hidden="{{hidden}}" style='background-color:#f5f5f5; height:100vh'>
+  <view class='device-icon'>
+    <view class='item-container' wx:for="{{iconList}}" wx:for-item="item" wx:key="id" data-panel="{{item.name}}" bindtap='changePanel'id="{{item.id}}">
+      <image class='item-icon' src="{{item.iconPath}}"></image>
+      <view class='item-text' style='color: {{item.textColor}}'>{{item.text}}</view>
+    </view>
+  </view>
+  <view class='device-container'>
+    <panel id="lamb" title="{{currentDeviceName}}">
+      <image slot="panelPicture" class='panel-picture-lamb' src="{{lamb.picture}}"></image>
+      <view slot="panelContent" class='button-container'>
+        <view class='button-row'>
+          <view class='control-button' bindtap="lambSwitchButtonClick">
+            <image class='button-icon' src="{{lamb.switchButton.icon}}"></image>
+            <view class='button-text'>{{lamb.switchButton.text}}</view>
+          </view>
+        </view>
+        <scroll-view scroll-y="true" style='height: 40vh'>
+          <view class='button-row'>
+            <view wx:for="{{lamb.list}}" wx:key='name' class='control-button' data-id="{{index}}" bindtap="lambButtonClick">
+              <image class='button-icon' src="{{item.icon}}"></image>
+              <view class='button-text'>{{item.name}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </panel>
+    <panel id="airConditioner" title="{{currentDeviceName}}">
+      <!-- <image slot="panelPicture" class='panel-picture-airconditioner' src="{{airConditioner.picture}}"></image> -->
+      <swiper style='position:absolute; width:100%' slot="panelPicture" indicator-dots="{{true}}" autoplay="{{false}}" interval="{{0}}" duration="{{0}}" bindchange='airConditionerChange'>
+        <block wx:for="{{airConditioner.list}}">
+          <swiper-item>
+            <image class='panel-picture-airconditioner' src="{{item.picture}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view slot="panelContent" class='button-container'>
+        <view class='button-row'>
+          <block wx:for="{{airConditioner.currentDevice.list}}" wx:key='name' wx:for-item="button" wx:for-index="buttonIndex">
+            <view wx:if="{{buttonIndex < 3}}" class='control-button' bindtap="conditionerButtonClick" data-id="{{buttonIndex}}">
+              <image class='button-icon' src="{{button.offIcon}}"></image>
+              <view class='button-text'>{{button.name}}</view>
+            </view>
+          </block>
+        </view>
+        <view class='button-row'>
+          <block wx:for="{{airConditioner.currentDevice.list}}" wx:key='name' wx:for-item="button" wx:for-index="buttonIndex">
+            <block wx:if="{{buttonIndex >= 3 && buttonIndex <= 5}}">
+              <view wx:if="{{buttonIndex != 4}}" class='control-button' bindtap="conditionerButtonClick" data-id="{{buttonIndex}}">
+                <image class='button-icon' src="{{button.offIcon}}"></image>
+                <view class='button-text'>{{button.name}}</view>
+              </view>
+              <view wx:else class='temperature-value'>{{button.value}}℃</view>
+            </block>
+          </block>
+        </view>
+        <view class='button-row'>
+          <block wx:for="{{airConditioner.currentDevice.list}}" wx:key='name' wx:for-item="button" wx:for-index="buttonIndex">
+            <view wx:if="{{buttonIndex > 5}}" class='control-button' bindtap="conditionerButtonClick" data-id="{{buttonIndex}}">
+              <image class='button-icon' src="{{button.offIcon}}"></image>
+              <view class='button-text'>{{button.name}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </panel>
+    <panel id="curtaine" title="{{currentDeviceName}}">
+      <!-- <image slot="panelPicture" class='panel-picture-curtaine' src="{{curtain.picture}}"></image> -->
+      <swiper style='position:absolute; width:100%' slot="panelPicture" indicator-dots="{{true}}" autoplay="{{false}}" interval="{{0}}" duration="{{0}}" bindchange='curtainChange'>
+        <block wx:for="{{curtain.list}}">
+          <swiper-item>
+            <image class='panel-picture-curtaine' src="{{item.picture}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view slot="panelContent" class='button-container'>
+        <view class='button-row'>
+          <block wx:for="{{curtain.currentDevice.list}}" wx:key='name' wx:for-item="button" wx:for-index="buttonIndex">
+            <view class='control-button' data-index="{{buttonIndex}}" bindtap='curtainButtonClick'>
+              <image class='button-icon' src="{{button.offIcon}}"></image>
+              <view class='button-text'>{{button.name}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </panel>
+    <panel id="television" title="{{currentDeviceName}}">
+      <image slot="panelPicture" class='panel-picture-tv' src="{{television.picture}}"></image>
+      <view slot="panelContent" class='button-container'>
+        <view class='button-row-tv'>
+          <block wx:for="{{television.list}}" wx:key='name'>
+            <view wx:if="{{index < 2}}" class='control-button' bindtap='tvButtonClick' data-id="{{index}}">
+              <image class='button-icon' src="{{item.offIcon}}"></image>
+              <view class='button-text'>{{item.name}}</view>
+            </view>
+          </block>
+        </view>
+        <view class='button-row-tv' style='height:21vh; align-items: flex-end; overflow: visible'>
+          <view class='cylinder' >
+            <view class='cylinder-icon-up'><image class='circle-icon' src='/resources/control/tv/TV_+.png'></image></view>
+            <view class='cylinder-text'>声音</view>
+            <view class="cylinder-icon-down"><image id='down' class='circle-icon' src='/resources/control/tv/TV_-.png'></image></view>
+          </view>
+          <view class='control-circle' src='/resources/control/tv/TV_circle.png'>
+            <view class='circle-row'><image class='circle-icon' src='/resources/control/tv/TV_arrow_up.png'></image></view>
+            <view class='circle-row'>
+              <image class='circle-icon' src='/resources/control/tv/TV_arrow_left.png'></image>
+              <image class='circle-ok' src='/resources/control/tv/TV_circle_OK.png'></image>
+              <image class='circle-icon' src='/resources/control/tv/TV_arrow_right.png'></image>
+            </view>
+            <view class='circle-row'><image class='circle-icon' src='/resources/control/tv/TV_arrow_down.png'></image></view>
+          </view>
+          <view class='cylinder'>
+            <view class="cylinder-icon-up"><image id='up' class='circle-icon' src='/resources/control/tv/TV_arrow_up.png'></image></view>
+            <view class='cylinder-text'>频道</view>
+            <view class="cylinder-icon-down"><image id='down' class='circle-icon' src='/resources/control/tv/TV_arrow_down.png'></image></view>
+          </view>
+        </view>
+        <view class='button-row-tv'>
+          <block wx:for="{{television.list}}" wx:key='name'>
+            <view wx:if="{{index >= 2}}" class='control-button'>
+              <image class='button-icon' src="{{item.offIcon}}"></image>
+              <view class='button-text'>{{item.name}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </panel>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/home/home.wxml-->
+
+<!-- <view class="container" style='background-color: #f5f5f5'>
+  <dialog 
+    id="loginDialog" 
+    title="登录窗口" 
+    content="为确保你能正常使用酒店功能请完善你的信息" 
+    border_radius="1vh"
+    width="55vw"
+    height="34vh"
+    bind:dialogConfirm="dialogConfirmHandler"
+    bind:dialogCancel="dialogCancelHandler">
+  </dialog>
+  
+  
+  
+</view> -->
+<dialog 
+  id="registerDialog" 
+  title="注册窗口" 
+  content="为确保你能正常使用酒店功能请完善你的信息" 
+  border_radius="1vh"
+  width="55vw"
+  height="34vh"
+  bind:dialogConfirm="dialogConfirmHandler"
+  bind:dialogCancel="dialogCancelHandler">
+</dialog>
+<record id="recordDialog" hidden="{{hidden}}" bind:closeRecord="closeRecordDialog"></record>
+<!-- <page id="index" generic:pageName="index"></page>
+<page id="control" generic:pageName="control"></page>
+<page id="service" generic:pageName="service"></page>
+<page id="own" generic:pageName="own"></page> -->
+<index id="index"></index>
+<control id="control"></control>
+<service id="service"></service>
+<own id="own"></own>
+<tabbar id="tabbar" recordDialogHidden="{{hidden}}" width="100vw" height="10vh" selectedIndex="0" bind:gotoNewPage="redirectHandler" bind:openRecord="openRecordDialog"></tabbar>
+

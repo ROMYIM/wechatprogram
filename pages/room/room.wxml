@@ -1,0 +1,31 @@
+<!--pages/room/room.wxml-->
+<view class='container'>
+  <view class='building-container'>
+    <view class='picker-container'>
+      <picker mode="selector" class='building-picker' range="{{buildingList}}" range-key="BLOCKNAME" value="BLOCKID" bindchange='changeBuilding'>{{blockName}}</picker>
+    </view>
+    <scroll-view scroll-x="true" class='floor-list'>
+      <block wx:for="{{floorList}}" wx:key="FLOORID">
+        <view wx:if="{{selectedFloor == index}}" bindtap='changeFloor' data-index="{{index}}" class='floor-item' style='border-bottom: 1rpx solid #4076f7'>
+          <view class='item-left'></view>
+          <view class='item-middle' style='color: #4076f7'>{{item.FLOORNAME}}</view>
+          <view class='item-right' style='color: #4076f7; border-color: #4076f7'>{{item.REMAINCOUNT}}</view>
+        </view>
+        <view wx:else  class='floor-item' bindtap='changeFloor' data-index="{{index}}">
+          <view class='item-left'></view>
+          <view class='item-middle'>{{item.FLOORNAME}}</view>
+          <view class='item-right'>{{item.REMAINCOUNT}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class='room-container'>
+    <block wx:for="{{roomList}}" wx:key="FAMILYID">
+      <view class='room-item' data-index="{{index}}" bindtap='createOrder'>
+        <image class='room-picture' src='/resources/book/room_icon.png'></image>
+        <view class='room-text'>{{item.FAMILYNAME}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+

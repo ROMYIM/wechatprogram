@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "预览",
+  "enablePullDownRefresh": false
+}

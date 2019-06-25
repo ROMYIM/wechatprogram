@@ -1,0 +1,42 @@
+<!--pages/register/register.wxml-->
+<view class='container' style='background-color:#f5f5f5; height: 100vh'>
+  <view class='userinfo'>
+    <image type="userAvatarUrl" class='userinfo-avatar' src="{{headPortrait}}"></image>
+    <view type="userNickName" class='userinfo-nickname'>{{nickName}}</view>
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type='getUserInfo' bindgetuserinfo='bindUserInfo' class='userino-nickname'>头像授权</button>
+    <block wx:else>
+      <view type="userNickName" class='userinfo-nickname'>{{nickName}}</view>
+    </block> -->
+  </view>
+  <form bindsubmit='register'>
+    <view class='register-panel'>
+      <view class='register-item'>
+        <image class='item-icon' src='../../resources/mobile.png'></image>
+        <input class='item-input' name="mobile" placeholder='请输入手机号码' bindinput='mobileInputEvent' required></input>
+      </view>
+      <view class='register-item'>
+        <image class='item-icon' src='../../resources/password.png'></image>
+        <input class='item-input' name="code" placeholder='请输入验证码' required></input>
+        <button class='code-button' disabled="{{buttonDisable}}" bindtap='getVerifyCode'>{{codeButtonText}}</button>
+      </view>
+    </view>
+    <!-- <button open-type='getUserInfo' bindgetuserinfo='bindUserInfo' class='submit-btn' form-type='submit'>授权注册</button> -->
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type='getUserInfo' bindgetuserinfo='bindUserInfo' class='submit-btn'>用户授权</button>
+    <button wx:else class='submit-btn' form-type='submit'>注册</button>
+  </form>
+</view>
+
+
+
+
+<!-- <view class="userinfo">
+  <text>{{hasUserInfo}}</text>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{hasUserInfo}}</text>
+  </block>
+</view>
+<view class="usermotto">
+  <text class="user-motto">{{motto}}</text>
+</view> -->

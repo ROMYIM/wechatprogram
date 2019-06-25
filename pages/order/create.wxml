@@ -1,0 +1,49 @@
+<!--pages/order/create.wxml-->
+<view class='background'>
+    <view class='order-info'>
+        <view wx:if="{{canISubmit != 1}}" class='order-item'>
+            <view class='item name'>订单编号</view>
+            <view class='item value'>{{order.ORDERNUM}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>入住房间</view>
+            <view class='item value'>{{order.FAMILYNAME}}/{{order.TYPENAME}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>入住人数</view>
+            <view class='item value'>{{order.PEOPLENUM}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>入住天数</view>
+            <view class='item value'>{{order.DAYS}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>入住时间</view>
+            <view class='item value'>{{order.STARTTIME}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>离开时间</view>
+            <view class='item value'>{{order.ENDTIME}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>状态</view>
+            <view class='item value'>{{order.ORDERSTATE}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>金额</view>
+            <view class='item value' style='color: #f3565b'>￥{{order.ROOMPRICE * order.DAYS}}</view>
+        </view>
+        <!-- <view class='order-item'>
+            <view class='item name'>押金</view>
+            <view class='item value' style='color: #f3565b'>￥{{order.DEPOSITPRICE}}</view>
+        </view>
+        <view class='order-item'>
+            <view class='item name'>合计</view>
+            <view class='item value' style='color: #f3565b'>￥{{order.TOTAL}}</view>
+        </view> -->
+    </view>
+
+    <button bindtap='createOrder'>确定订单</button>
+    <!-- <button wx:if="{{canISubmit == 1}}" bindtap='createOrder'>确定订单</button>
+    <button wx:if="{{canISubmit == 2}}" bindtap='checkOutRoom'>确定退房</button> -->
+</view>

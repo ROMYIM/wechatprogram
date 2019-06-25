@@ -1,0 +1,49 @@
+/* pages/personal_info/personal_info.wxss */
+
+.background {
+    background-color: #f5f5f5;
+    width: 92vw;
+    height: 90vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.user-info-panel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1vh;
+    background-color: white;
+}
+
+.user-info-item {
+    width: 90%;
+    height: 10vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #e0e0e0;
+}
+
+.item-text {
+    font-family: MicrosoftYaHei;
+	font-size: 2.5vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+	color: black;
+}
+
+.item-input {
+    font-size:.8rem;
+    color:rgb(77, 77, 77);
+    width: 30vw;
+    text-align: justify;
+    text-align-last: right;
+}

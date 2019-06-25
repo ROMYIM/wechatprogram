@@ -1,0 +1,26 @@
+<!--components/record/record.wxml-->
+<view class='dialog-background' hidden="{{hidden}}">
+    <view class='dialog-mask'></view>
+    <view class="dialog-container" hidden="{{panelHidden}}">
+        <image class="dialog-close-btn" src="/resources/record/voice_icon_shutdown.png" catch:tap="_closeEvent"></image>
+        <view class="dialog-title">按住录音键你可以这样说</view>
+        <view class="dialog-panel">
+        <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index">
+            <view class="dialog-item" style="overflow: {{item.overflow}}; height: {{item.height}}" data-index="{{index}}" bind:tap="_itemClickEvent">
+                <image class="item-icon" src="{{item.icon}}" />
+                <view class="item-text-container">
+                    <view class="item-text">{{item.text}}</view>
+                    <view wx:for="{{item.tips}}" wx:for-item="tip" class="item-text" style="font-size: 2vh">{{tip}}</view>
+                </view>
+                <view class="item-arrow"></view>
+            </view>
+        </block>
+        </view>
+    </view>
+    <view class="record-tabbar">
+        <image class="record-icon" src="/resources/record/record-icon.png" bindtouchstart='startSpeak' bindtouchend='stopRecord'/>
+    </view>
+    <view class="circle-style" animation="{{spreakingAnimation1}}" ></view>
+    <view class="circle-style" animation="{{spreakingAnimation2}}" ></view>
+    <view class="circle-style" animation="{{spreakingAnimation3}}" ></view>
+</view>

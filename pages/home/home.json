@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "index": "/components/index/index",
+    "control": "/components/control/control",
+    "service": "/components/service/service",
+    "own": "/components/own/own",
+    "dialog": "/components/dialog/dialog",
+    "tabbar": "/components/tabbar/tabbar",
+    "page": "/components/page/page",
+    "record": "/components/record/record"
+  },
+  "backgroundColor": "#4076f7"
+}

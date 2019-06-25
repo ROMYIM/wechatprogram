@@ -1,0 +1,82 @@
+/* pages/register/register.wxss */
+.userinfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 30vw;
+  height: 30vw;
+  margin: 10vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userinfo-nickname {
+  /* color: #aaa; */
+  color: black;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.register-panel {
+  background-color: white;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
+  border-radius: 10rpx;
+}
+
+.register-item {
+  height: 10vh;
+  width: 100%;
+}
+
+.item-icon {
+  width:.8rem;
+  height:4vh;
+  float:left;
+  padding-top:3.3vh;
+  padding-left:4%
+}
+
+.item-input {
+  font-size:.8rem;
+  color:rgb(34, 34, 34);
+  float:left;
+  padding:2.6vh;
+  width: 30vw;
+}
+
+.code-button {
+  font-size: .8rem;
+  background-color: #4076f7;
+  color: white;
+  text-align: center;
+  line-height: 5vh;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  float: right;
+  margin-right: 5%;
+  /* width: 30vw; */
+}
+
+.submit-btn {
+  width: 90vw;
+  height: 7vh;
+  line-height: 7vh;
+  text-align: center;
+  background-color: #4076f7;
+  color: white;
+  border-radius: 10rpx;
+  margin-top: 5vh;
+}

@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+		"checkOutDialog": "/components/dialog/checkout"
+	},
+	"navigationBarTitleText": "订单列表",
+	"enablePullDownRefresh": false
+}

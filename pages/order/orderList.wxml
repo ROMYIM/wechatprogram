@@ -1,0 +1,72 @@
+<!--pages/order/orderList.wxml-->
+<!-- <view class='background'>
+	<view class='order-info'>
+		<block wx:for="{{list}}" wx:key="ORDERNUM" >
+			<view class='item-container' data-index="{{index}}" bindtap='getOrderDetail'>
+				<view class='check-in-item'>
+					<view class='item name'>{{item.ORDERNUM}}</view>
+					<view class='item money'>{{item.FAMILYNAME}}</view>
+				</view>
+				<view class='check-in-item'>
+					<view class='date-item'><view class='date-item-label'>入住时间：</view><view class='date-item-value'>{{item.STARTTIME}}</view></view>
+					<view class='date-item'><view class='date-item-label'>离开时间：</view><view class='date-item-value'>{{item.ENDTIME}}</view></view>
+				</view>  
+			</view>
+		</block>
+	</view>
+</view> -->
+
+<view class="tabbar container">
+	<!-- <view wx:if="{{canISubmit < 1}}" class="tabbar item selected">全部订单</view>
+	<block wx:else><view class="tabbar item normal" data-type="0" catch:tap="changeOrderType">全部订单</view></block> -->
+	<view wx:if="{{canISubmit == 1}}" class="tabbar item selected">已预订</view>
+	<block wx:else><view class="tabbar item normal" data-type="1" catch:tap="changeOrderType">已预订</view></block>
+	<view wx:if="{{canISubmit == 2}}" class="tabbar item selected">已入住</view>
+	<block wx:else><view class="tabbar item normal" data-type="2" catch:tap="changeOrderType">已入住</view></block>
+	<view wx:if="{{canISubmit == 3}}" class="tabbar item selected">已退房</view>
+	<block wx:else><view class="tabbar item normal" data-type="3" catch:tap="changeOrderType">已退房</view></block>
+	<view wx:if="{{canISubmit == 4}}" class="tabbar item selected">已过期</view>
+	<block wx:else><view class="tabbar item normal" data-type="4" catch:tap="changeOrderType">已过期</view></block>
+</view>
+<view class="background">
+	<block wx:if="{{list.length > 0}}">
+		<view class="order-item-container" wx:for="{{list}}" wx:key="ORDERNUM" bind:tap="getOrderDetail" data-index="{{index}}">
+			<view class="item-title">
+				<view class="no">订单编号：{{item.ORDERNUM}}</view>
+				<view class="order-type" wx:if="{{item.ORDERSTATE == 1}}">已预订</view>
+				<view class="order-type" wx:elif="{{item.ORDERSTATE == 2}}">已入住</view>
+				<view class="order-type" wx:elif="{{item.ORDERSTATE == 3}}">已退房</view>
+				<view class="order-type" wx:elif="{{item.ORDERSTATE == 4}}">已过期</view>
+			</view>
+			<view class="item-detail-container">
+				<image class="item-detail-picture" src="{{item.PICTURE ? item.PICTURE : defaultPicture}}" binderror="imageError" data-index="{{index}}" />
+				<view class="family-type-detail">
+					<view class="item-title family-type name">{{item.FAMILYNAME}}</view>
+					<view class="item-title family-type">{{item.TYPENAME}}</view>
+					<view class="item-title family-type duration">{{item.STARTTIME}} 至 {{item.ENDTIME}}</view>
+				</view>
+				<view class="item-price">
+					<view class="item-title family-type price">￥{{item.DPRICE}}</view>
+					<view class="item-title family-type price">x{{item.DAYS}}</view>
+				</view>
+			</view>
+			<view class="item-contorl">
+				<block wx:if="{{item.ORDERSTATE == 1 || item.ORDERSTATE == 2}}">
+					<view class="control-button" catch:tap="showDialog" data-index="{{index}}">退房</view>
+					<view class="control-button" catch:tap="renewalRoom" data-index="{{index}}">续房</view>
+				</block>
+				<block wx:elif="{{item.ORDERSTATE == 3}}">
+					<view class="control-button" catch:tap="bookRoom">再次预定</view>
+					<view class="control-button">评价</view>
+				</block>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="no-item-container">
+			<image class="no-item-picture" src="/resources/order/mine_icon_dontorder.png" />
+			<view class="no-itme-text">你暂时还没有订单</view>
+		</view>
+	</block>
+</view>
+<checkOutDialog id="checkOutDialog" hidden="{{hidden}}" title="退房窗口" content="确定退房？" border_radius="1vh" width="55vw" height="34vh"></checkOutDialog>

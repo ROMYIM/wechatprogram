@@ -1,0 +1,8 @@
+<!--pages/picture/picture.wxml-->
+<view class='container'>
+  <swiper class='picture-container' indicator-dots="{{true}}">
+    <swiper-item wx:for="{{list}}">
+      <image class='picture' src="https://mkcloud.gotechcn.cn/smarthotelImages/{{item}}"></image>
+    </swiper-item>
+  </swiper>
+</view>

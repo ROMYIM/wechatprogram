@@ -1,0 +1,235 @@
+/* components/control/control.wxss */
+.container {
+  width: 100vw;
+  height: 90vh;
+  background-color: #c2c3c7;
+  display: block;
+  overflow: scroll;
+}
+
+.room-list {
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+}
+
+.room-item {
+  width: 20vw;
+  height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+  color: black;
+  font-size: 4vw;
+  font-family: '黑体';
+}
+
+.item-control {
+  height: 20vh;
+  width: 100%;
+}
+.item-icon {
+  height: 6vw;
+  width: 6vw;
+  /* margin-left: 7vw;
+  margin-top: 13vh;  */
+  
+}
+.item-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-text {
+  width: 5vw;
+  height: 2vw;
+  font-size: 2.5vw;
+}
+.device-icon {
+  height: 77vh;
+  width: 12vw;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+.device-container {
+  float: left;
+  border-radius: 10rpx;
+  width: 83vw;
+  height: 80vh;
+  /* margin: 10vh, 15vw; */
+  background-color: white;
+  margin-top: 5vh;
+  
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button-row-tv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.control-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vh;
+  margin-left: 8vw;
+  margin-right: 8vw;
+   width: 11vw;
+}
+
+.button-icon {
+  width: 11vw;
+  height: 11vw;
+}
+
+.button-text {
+  font-size: 3vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #010101;
+}
+
+.temperature-value {
+  font-size: 4vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #010101;
+}
+
+.cylinder {
+  width: 12vw;
+  height: 21vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.cylinder-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12vw;
+  height: 21vh;
+}
+
+.cylinder-icon-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 12vw;
+  height: 7vh;
+  border-radius: 50% 50% 0 0; 
+  box-shadow: 0 10px 30px #f6f6f6 inset;
+}
+
+.cylinder-icon-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 12vw;
+  height: 7vh;
+  border-radius: 0 0 50% 50%;  
+  box-shadow: 0px -10px 30px #f6f6f6 inset;
+}
+
+.cylinder-text {
+  width: 12vw;
+  height: 7vh;
+  line-height: 7vh;
+  font-family: MicrosoftYaHei;
+	font-size: 3vw;
+  text-align: center;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #000000;
+  border: none; 
+  box-shadow: inset 0px 0px 30px #f6f6f6, inset 0px 0px 30px #f6f6f6
+}
+
+.control-circle {
+  width: 48vw;
+  height: 48vw;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 50px #f5f5f5;
+}
+
+.circle-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 16vw;
+  justify-content: space-evenly;
+}
+
+.circle-icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.circle-ok {
+  width: 16vw;
+  height: 16vw;
+}
+
+.panel-picture-lamb {
+  top: 0;
+  left: 19vw;
+  width: 50vw;
+  height: 27vh;
+  position: absolute;
+}
+
+.panel-picture-airconditioner {
+  left: 22vw; 
+  top: 5vh; 
+  width:36vw; 
+  height:22vh;
+  position: absolute;
+}
+
+.panel-picture-curtaine {
+  left: 22vw; 
+  top: 7vh; 
+  width:36vw; 
+  height:15vh;
+  position: absolute;
+}
+
+.panel-picture-tv {
+  left: 20vw; 
+  top:6vh; 
+  width:37vw; 
+  height:14vh;
+  position: absolute;
+}
+

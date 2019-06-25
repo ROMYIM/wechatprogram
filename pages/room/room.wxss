@@ -1,0 +1,133 @@
+/* pages/room/room.wxss */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e0e0e0;
+  overflow: scroll;
+}
+
+.building-container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.floor-list {
+  float: left;
+  width: 80vw;
+  height: 5vh;
+  /* overflow-x: auto;
+  overflow-y: hidden; */
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  /* flex-wrap: nowrap; */
+  padding-top: 1vh;
+  background-color: white;
+}
+
+.picker-container {
+  height: 5vh;
+  width: 20vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: .5vh;
+}
+
+.building-picker {
+  width: 15vw;
+  height: 4vh;
+  color: black;
+  font-size: 4vw;
+  font-family: '黑体';
+  text-align: center;
+  background-color: #e0e0e0;
+  border-radius: 10rpx;
+  line-height: 4vh;
+}
+
+.floor-item {
+  /* float: left; */
+  height: 5vh;
+  width: 20vw;
+  /* display: inline-block; */
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.item-left, .item-middle {
+  width: 33.3%;
+  height: 5vh;
+  font-size: 4vw;
+  font-family: '黑体';
+  line-height: 5vh;
+  text-align: center;
+}
+
+.item-right {
+  height: 4vw;
+  width: 4vw;
+  line-height: 4vw;
+  border-radius: 50%;
+  font-size: 3vw;
+  font-family: '宋体';
+  border: 1rpx solid black;
+  text-align: center;
+}
+
+.room-container {
+  background-color: #e0e0e0;
+  /* overflow: scroll; */
+  width: 92vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 3vw;
+}
+
+.room-item {
+  width: 45vw;
+  height: 12vh;
+  margin-top: 3vw;
+  background-color: white;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+
+.room-picture {
+  width: 16vw;
+  height: 7vh;
+}
+
+.room-text {
+  font-family: MicrosoftYaHei;
+	font-size: 2vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #000000;
+}
+
+button {
+  padding: 0;
+  margin-top: 7vh;
+  width: 90vw;
+  height: 8vh;
+  background-color: #3c73f8;
+  color: white;
+  font-size: 4vw;
+  font-family: 'Consolas';
+  border-radius: 4vh;
+  line-height: 8vh;
+}

@@ -1,0 +1,6 @@
+<!--pages/result/result.wxml-->
+<view class='container'>
+  <image class='icon' src="{{icon}}"></image>
+  <view class='message'>{{message}}</view>
+</view>
+<button bindtap='buttonClick'>完成</button>

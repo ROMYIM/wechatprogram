@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "calendar": "/components/calendar/calendar"
+  },
+  "navigationBarTitleText": "续房",
+	"enablePullDownRefresh": false
+}

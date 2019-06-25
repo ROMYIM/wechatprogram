@@ -1,0 +1,56 @@
+<!--pages/recede/recede.wxml-->
+<view class='background'>
+  <view class='book-container'>
+    <view class='check-in-item'>
+      <view class='item name'>订单编号</view>
+      <view class='item value'>100154688259610</view>
+    </view>
+    <view class='check-in-item last'>
+      <view class='date-item'>
+        <view class='date-label'>入住时间</view>
+        <view class='date-text'>{{enterDate.date}}</view>
+      </view>
+      <view class='duration-text'>共{{days}}天</view>
+      <view class='date-item'>
+        <view class='date-label'>退宿时间</view>
+        <view class='date-text'>{{leaveDate.date}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='book-container'>
+    <view class='check-in-item'>
+      <view class='item name'>房间</view>
+      <view class='consume-item'>
+        <view class='consume'><view class='item consume'>401房</view><view class='item money'>￥150</view></view>
+        <view class='consume'><view class='item consume'>402房</view><view class='item money'>￥150</view></view>
+      </view>
+    </view>
+    <view class='check-in-item last'>
+      <view class='item name'>押金</view>
+      <view class='item money'>￥200</view>
+    </view>
+  </view>
+
+  <view class='book-container'>
+    <view class='check-in-item'>
+      <view class='item name'>额外费用</view>
+      <view class='consume-item'>
+        <view class='consume'><view class='item consume'>水费</view><view class='item money'>￥2.3</view></view>
+        <view class='consume'><view class='item consume'>电费</view><view class='item money'>￥3.5</view></view>
+      </view>
+    </view>
+    <view class='check-in-item last'>
+      <view class='item name'>合计</view>
+      <view class='item money'>￥5.8</view>
+    </view>
+  </view>
+    
+  <view class='book-container'>
+    <view class='check-in-item last'>
+      <view class='item name'>退款金额</view>
+      <view class='item money'>￥94.2</view>
+    </view>
+  </view>
+
+  <button>确定</button>
+</view>
